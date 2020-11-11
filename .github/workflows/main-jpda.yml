@@ -39,7 +39,7 @@ jobs:
           # Provide the Id of the subscription which should be used, only required for resource Group or Subscription deployments.
           subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           # Provide the name of a resource group, only required for resource Group deployments.
-          resourceGroupName: identity
+          resourceGroupName: test-me-dev-cmatskas-msi-app
           # Specify the path or URL to the Azure Resource Manager template.
           template: ./deployment/azuredeploy.json
           # Supply deployment parameter values.
