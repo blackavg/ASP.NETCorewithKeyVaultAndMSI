@@ -17,11 +17,11 @@ namespace ASPCoreWithKV
             Host.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((context, config) =>
                 {
-                        var builtConfig = config.Build();
-                        config.AddAzureKeyVault( new Uri("https://cm-identity-kv.vault.azure.net"),
+                    var builtConfig = config.Build();
+                    config.AddAzureKeyVault(new Uri("https://cm-identity-kv.vault.azure.net"),
                             new ChainedTokenCredential(
-                                new AzureCliCredential(), 
-                                new ManagedIdentityCredential()));
+                            new AzureCliCredential(),
+                            new ManagedIdentityCredential()));
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
