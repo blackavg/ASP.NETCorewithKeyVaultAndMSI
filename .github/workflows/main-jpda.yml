@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: [Managed Identity] Build and deploy WebApp & SQL
+name: (MSI) Build and deploy WebApp & SQL
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
@@ -9,10 +9,9 @@ on:
     branches: [ main ]
     
 env:
-  AZURE_WEBAPP_NAME: cmdotnetconfdemo    # set this to your application's name
+  AZURE_WEBAPP_NAME: jpda-msi-kv-deploy    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '5.0.100'
-  SUBSCRIPTION_ID: 'e42acc2d-8462-4fb5-bf0d-d983c0017584'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,7 +37,7 @@ jobs:
           # Provide the scope of the deployment. Valid values are: 'resourcegroup', 'managementgroup', 'subscription'
           scope: resourcegroup
           # Provide the Id of the subscription which should be used, only required for resource Group or Subscription deployments.
-          subscriptionId: ${{ env.SUBSCRIPTION_ID }}
+          subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           # Provide the name of a resource group, only required for resource Group deployments.
           resourceGroupName: identity
           # Specify the path or URL to the Azure Resource Manager template.

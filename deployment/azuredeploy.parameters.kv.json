@@ -2,17 +2,9 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "location":{
+        "location": {
             "value": "East US"
         },
-        "serverName": {
-            "value": "cmspdemosqlserver"
-        },
-
-        "sites_cmdotnetconfdemo_name": {
-            "value": "cmdotnetconfdemo"
-        },
-
         "administratorLogin": {
             "reference": {
                 "keyVault": {
@@ -28,6 +20,12 @@
                 },
                 "secretName": "sqlAdministratorLoginPassword"
             }
+        },
+        "sites_cmdotnetconfdemo_name": {
+            "value": "jpda-msi-kv-deploy"
+        },
+        "serverfarms_ASP_identity_8cea_name": {
+            "value": "ASP-identity-1cea"
         }
     }
 }
