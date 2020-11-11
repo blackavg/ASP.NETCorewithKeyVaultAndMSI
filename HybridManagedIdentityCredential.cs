@@ -80,7 +80,7 @@ namespace ASPCoreWithKV
                 return new AccessToken(receivedToken.AccessToken, tokenExpiresOn);
             }
             Console.WriteLine(await response.Content.ReadAsStringAsync());
-            return new AccessToken();
+            return default;
         }
     }
 
