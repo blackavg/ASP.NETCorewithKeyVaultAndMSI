@@ -35,11 +35,11 @@
         }
       },
       "sites_cmdotnetconfdemo_name": {
-            "defaultValue": "cmdotnetconfdemo",
+            "defaultValue": "jpda-msi-kv-deploy",
             "type": "String"
         },
         "serverfarms_ASP_identity_8cea_name": {
-            "defaultValue": "ASP-identity-8cea",
+            "defaultValue": "ASP-identity-1cea",
             "type": "String"
         }
     },
